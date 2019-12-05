@@ -1,0 +1,201 @@
+*{
+  margin:0;
+  padding: 0;
+}
+.dw_homepage {
+
+  .dwHeader {
+    position: fixed;
+    width:100%;
+    left:0;
+    top:0;
+    z-index:6;
+    background: #fff;
+    
+    &.dwFixed{
+      background:#fff;
+      z-index:110000000;
+       .clHeaderMain {
+       }
+    }
+
+    .clHeaderMain {
+      height : 60px; 
+      width:100%;
+      background: transparent;
+      position:relative;
+      
+      .logoHeader {
+        left :20px;
+        top:50%;
+        @include transYPlus(scale(1));
+        position:absolute;
+        @include animCustomEase(0.2s transform ease-in-out,0.2s opacity ease-in-out, 0.5s left ease-in-out, 0.5s top ease-in-out );
+        color:#fff;
+        
+        .logo-site {
+          height:42px;
+        }
+
+        &.animated{
+          @include transYPlus(scale(0));
+          top: 50px;
+          left: 139px;
+          opacity:0;
+           @include mbLarge{
+              @include transYPlus(scale(1));
+               left :20px;
+              top:50%;
+              opacity: 1;
+            }
+          &.animatedPlus{
+            opacity:1;
+            @include transYPlus(scale(2.5));
+            @include mbLarge{
+              @include transYPlus(scale(1));
+            }
+          }
+          @include animCustomEase(0.2s transform ease-in-out,0.2s opacity ease-in-out, 0.5s left ease-in-out, 0.5s top ease-in-out );
+        }
+        i {
+          font-size:30px;
+          &.logoPlus{
+            position:absolute;
+            top:0;
+            left:0;
+            color:red;
+            width:0;
+            overflow:hidden;
+            color: #e71788;
+            color: -moz-linear-gradient(45deg,#e71788 0%,#35368f 100%);
+            color: -webkit-linear-gradient(45deg,#e71788 0%,#35368f 100%);
+            color: linear-gradient(45deg,#e71788 0%,#35368f 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e71788',endColorstr='#35368f',GradientType=1);
+          }
+        }
+      }
+
+      .menu-dw {
+        right :20px;
+        top:50%;
+        @include transY();
+        position:absolute;
+        color:#000;
+        display: none;
+        @include mbLarge{
+          display: block;
+          &.active {
+            color: #D1A33D;
+          }
+        }
+        i{
+          font-size:21px;
+        }
+      }
+
+      .dynamic-name {
+        right :-100%;
+        top:50%;
+        @include transYPlus(scale(0.1));
+        position:absolute;
+         @include animCustomEase(0.2s transform ease-in-out,0.2s opacity ease-in-out, 0.5s left ease-in-out, 0.5s top ease-in-out );
+        font-family: $futuraMedium;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity:0;
+        color: #fff;
+        display: none;
+        @include mbLarge{
+          font-size: 10px;
+          font-family: $montserratBold;
+        }
+        &.animated{
+          opacity:1;
+          &.animatedPlus{
+            @include transYPlus(scale(1.3));
+          }
+        }
+        i{
+          font-size:30px;
+        }
+      }
+    }
+  }
+}
+
+.menu-basic{
+  position:absolute;
+  @include transY();
+  top:50%;
+  right:40px;
+  @include mbLarge{
+    display:block;
+    right: -100%;
+    @include animationMediaCustomMenu2(0.6s);
+    top:60px;
+    position: fixed;
+
+    &.active{
+      display:block;
+      @include translateInitial();
+      top:60px;
+      right:0;
+      left:initial;
+      width: 80%;
+      max-width:350px;
+      height: 100%;
+      background: #fff;
+      position: fixed;
+      z-index: 3000000;
+
+      &:before{
+        content: "";
+        display: block;
+        width:100%;
+        right:20%;
+        height:100%;
+        position:fixed;
+        z-index:30000;
+        background: rgba(0,0,0,0.7);
+      }
+    }
+  }
+  ul{
+    @include mbLarge{
+      width:100%;
+      position:absolute;
+      height:100%;
+      background:#fff;
+      z-index:300001;
+    }
+    li{
+      display:inline-block;
+      list-style-type:none;
+      @include mbLarge{
+        background:#fff;
+      }
+      @include mbLarge{
+        display:block;
+        width:100%;
+        height:45px;
+        line-height:45px;
+        text-align:center;
+      }
+      a{
+        font-family: $futuraMedium;
+        font-size:16px;
+        text-transform:uppercase;
+        color:#363636;
+        &.active {
+          color:#D1A33D;
+        }
+      }
+      + li {
+        padding-left:40px;
+        @include mbLarge{
+          padding: 0;
+        }
+      }
+    }
+  }
+}

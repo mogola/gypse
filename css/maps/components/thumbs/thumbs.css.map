@@ -1,0 +1,1 @@
+{"version":3,"file":"../../../components/thumbs/thumbs.css","sources":["components/thumbs/thumbs.scss"],"sourcesContent":[".swiper-container-thumbs {\n  .swiper-slide-thumb-active {\n    // Styles for active thumb slide\n  }\n}"],"names":[],"mappings":""}

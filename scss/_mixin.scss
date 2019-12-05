@@ -1,0 +1,342 @@
+// width responsive detection 
+$widthMobile : 768px;
+$widthTabletPortrait : 1024px;
+@mixin mbLarge {
+  @media (max-width: #{$widthTabletPortrait - 1px}) {
+    @content;
+  }
+}
+@mixin mb {
+  @media (max-width: #{$widthMobile - 1px}) {
+    @content;
+  }
+}
+@mixin tb {
+  @media (min-width: #{$widthMobile - 1px}) and (max-width: #{$widthTabletPortrait - 1px}) {
+    @content;
+  }
+}
+@mixin myprocess{
+	&.process_msc{
+		@content;
+	}
+}
+@mixin before{
+	&:before{
+		@include mybefore; 
+		@content;
+	}
+}
+
+@mixin myBefore($color1,$color2,$color3,$op,$zindex, $w, $h, $l, $t){
+	content:"";
+	display:block;
+	z-index:$zindex;
+	background:rgba($color1,$color2,$color3, $op);
+	width:$w;
+	height:$h;
+	top:$t;
+	left:$l;
+	position:absolute;
+
+}
+@mixin animationMediaCustomMenu($s){
+	-webkit-transition: $s left ease;
+	transition: $s left ease;
+}
+@mixin animationMediaCustomMenu2($s){
+	-webkit-transition: $s right ease;
+	transition: $s right ease;
+}
+@mixin animationMediaCustom($s){
+	-webkit-transition: $s all  ease-in-out;
+	transition: $s all ease-in-out;
+}
+@mixin animationMedia(){
+	-webkit-transition: 0.5s width ease-in-out;
+	transition: 0.5s width ease-in-out;
+}
+@mixin animCustom($anim){
+	-webkit-transition: 0.3s $anim ease-out;
+	transition: 0.3s $anim ease-out;
+}
+@mixin animCustomEase($anim,$anim2, $anim3,$anim4){
+	-webkit-transition: $anim,$anim2, $anim3,$anim4;
+	transition: $anim,$anim2, $anim3,$anim4;
+}
+
+@mixin animateStyle($s,$anim, $type){
+	-webkit-transition:$s $anim $type;
+	transition:$s $anim $type;
+}
+
+@mixin animCustomImportant($anim){
+	-webkit-transition: 0.5s $anim ease-out !important;
+	transition: 0.5s $anim ease-out !important;
+}
+@mixin focusGroup(){
+	background:$bgFormActive;
+	height:74px;
+	width:116%;
+	display:block;
+	position:absolute;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	left:50%;
+	top:-20px;
+}
+@mixin focusGroupError(){
+	background:$bgErrorForm;
+	height:74px;
+	width:116%;
+	display:block;
+	position:absolute;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	left:50%;
+	top:-20px;
+}
+@mixin defaultInput(){
+	height:45px;
+	line-height:45px;
+	font-size:14px;
+	border:0 none;
+	box-shadow:none;
+	border-bottom:2px solid $blueColor2;
+	display:block;
+	width:100%;
+	outline:0 none;
+	color:$bluecolor;
+	&[disabled]{
+		opacity:0.7;
+	}
+}
+@mixin defaultLabel(){
+	font-size:11px;						
+	font-weight:bold;
+	color:$blueLabel;
+	z-index:1;
+	position:relative;
+	text-transform:uppercase;
+}
+
+@mixin defaultButton(){
+	font-size:11px;						
+	font-weight:normal;
+	color:$colorWhite;
+	background:$blueButton;
+	text-align:center;
+	height:44px;
+	line-height:44px;
+	padding:0 30px;
+	border-radius:4px;
+	border:0 none;
+	text-transform:uppercase;
+	cursor:pointer;
+	letter-spacing:1px;
+	@include mb{
+		margin-top:36px;
+	}
+}
+@mixin defaultButtonCustom($bgCustom){
+	font-size:11px;						
+	font-weight:normal;
+	color:$colorWhite;
+	background:$bgCustom;
+	text-align:center;
+	height:44px;
+	line-height:44px;
+	padding:0 30px;
+	border-radius:4px;
+	border:0 none;
+	text-transform:uppercase;
+	cursor:pointer;
+	letter-spacing:1px;
+	display:inline-block;
+	box-sizing:border-box;
+	@include animationMediaCustom(0.5s)
+	&:hover{
+		background:$colorWhite;
+		color:$bgCustom;
+	}
+	@include mb{
+	}
+	@include tb{
+
+	}
+}
+@mixin defaultButtonCancel(){
+	font-size:11px;						
+	font-weight:normal;
+	color:$colorWhite;
+	background:$grey2;
+	text-align:center;
+	height:44px;
+	line-height:44px;
+	padding:0 30px;
+	border-radius:4px;
+	border:0 none;
+	text-transform:uppercase;
+	cursor:pointer;
+	@include mb{
+		margin-top:36px;
+	}
+}
+@mixin translateInitial(){
+	transform:initial !important;
+	-webkit-transform:initial !important;
+}
+@mixin transY(){
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+}
+@mixin transX(){
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	left:50%;
+}
+@mixin translateCenter(){
+	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	left:50%;
+	top:50%;
+	position:absolute;
+}
+@mixin translateCenterPlus($other){
+	transform:translate(-50%, -50%) $other;
+	-webkit-transform:translate(-50%, -50%) $other;
+	left:50%;
+	top:50%;
+	position:absolute;
+}
+@mixin transYPlus($other){
+	transform:translateY(-50%) $other;
+	-webkit-transform:translateY(-50%) $other;
+}
+@mixin transXPlus($other){
+	transform:translateX(-50%) $other;
+	-webkit-transform:translateX(-50%) $other;
+}
+@mixin translateCenterScale(){
+	transform:translate(-50%, -50%) scale(1.2);
+	-webkit-transform:translate(-50%, -50%)  scale(1.2);
+	left:50%;
+	top:50%;
+	position:absolute;
+}
+@mixin transform($other){
+	transform:$other;
+	-webkit-transform:$other;
+}
+// color mixin 
+@mixin doWhite($opacity){
+	background:rgba(255,255,255,$opacity);
+}
+@mixin doBlack($opacity){
+	background:rgba(0,0,0,$opacity);
+}
+
+// color mixin 
+@mixin doWhiteTxt($opacity){
+	color:rgba(255,255,255,$opacity);
+}
+@mixin doBlackTxt($opacity){
+	color:rgba(0,0,0,$opacity);
+}
+
+@mixin customBackground($x,$c,$d,$opacity){
+	background:rgba($x,$c,$d,$opacity);
+}
+
+@mixin circle($c,$e,$v){
+	display:inline-block;
+	width:$c;
+	height:$c;
+	line-height:$c;
+	border-radius:100%;
+	color:$e;
+	background:$v;
+	box-sizing:border-box;
+	vertical-align:middle;
+}
+
+@mixin mscEllipsis(){
+	overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin gradientGreen{
+	background: #27e834;
+background: -moz-radial-gradient(center, ellipse cover, #27e834 0%, #61c419 99%);
+background: -webkit-radial-gradient(center, ellipse cover, #27e834 0%,#61c419 99%);
+background: radial-gradient(ellipse at center, #27e834 0%,#61c419 99%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27e834', endColorstr='#61c419',GradientType=1 );
+}
+
+
+/// homepage 
+
+/* Homepage links, buttons and CTA */
+
+.cta-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 17px;
+    border: solid 1px;
+    opacity: 0.8;
+    color: #000;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    white-space: nowrap;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+    &.white {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    &:hover {
+        letter-spacing: 2px;
+        padding: 8px 9px;
+        opacity: 1;
+    }
+}
+
+.link-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    border-bottom: 1px solid;
+    padding-bottom: 4px;
+    opacity: 0.8;
+    white-space: nowrap;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+    &.white {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    &:hover {
+        letter-spacing: 2px;
+        opacity: 1;
+    }
+}
+
+@mixin myflex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
