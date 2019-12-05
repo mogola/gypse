@@ -13793,7 +13793,7 @@ label.panel-block:hover {
   }
 }
 
-.dwFooter .clFooterMain .cl-block .cl-content-block ul.infoDwShare li:nth-child(odd) a {
+.dwFooter .clFooterMain .cl-block .cl-content-block ul.infoDwShare li a {
   text-decoration: none;
   color: #000;
 }
