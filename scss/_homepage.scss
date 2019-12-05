@@ -529,13 +529,18 @@ body{
 	color:#fff;
 	z-index:11;
 	font-family: $futuraMedium;
+	padding: 20px;
+	background: rgba(0, 0,0,0.8);
+	border:1px solid #D1A33D;
 
 	h2{
 		font-size: 76px;
+		color: #D1A33D;
 	}
 
 	h3{
 		font-size:25px;
+		color: #D1A33D;
 	}
 }
 

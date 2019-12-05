@@ -14490,14 +14490,19 @@ body a {
   color: #fff;
   z-index: 11;
   font-family: "Futura-medium";
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #D1A33D;
 }
 
 .ttl-tile h2 {
   font-size: 76px;
+  color: #D1A33D;
 }
 
 .ttl-tile h3 {
   font-size: 25px;
+  color: #D1A33D;
 }
 
 .columns .column:nth-child(even) {
