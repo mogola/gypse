@@ -5,15 +5,15 @@ var path = require('path');
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 5555;
 
 app.use('/css', express.static('css'));
-app.use('/images', express.static('images'));
+app.use('/Images', express.static('images'));
 app.use('/js', express.static('js'))
 app.use('/fonts', express.static('fonts'))
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/home', function(req, res) {
+app.get('/home', function (req, res) {
     res.sendFile(path.join(__dirname + '/home.html'));
 })
 
