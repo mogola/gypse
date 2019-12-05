@@ -5,7 +5,7 @@ var path = require('path');
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 5555;
 
 app.use('/css', express.static('css'));
-app.use('/Images', express.static('images'));
+app.use('/Images', express.static('Images'));
 app.use('/js', express.static('js'))
 app.use('/fonts', express.static('fonts'))
 
