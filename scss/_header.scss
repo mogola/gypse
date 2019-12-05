@@ -39,8 +39,6 @@
 
         &.animated{
           @include transYPlus(scale(0));
-          top: 50px;
-          left: 139px;
           opacity:0;
            @include mbLarge{
               @include transYPlus(scale(1));
@@ -50,7 +48,7 @@
             }
           &.animatedPlus{
             opacity:1;
-            @include transYPlus(scale(2.5));
+            @include transYPlus(scale(1));
             @include mbLarge{
               @include transYPlus(scale(1));
             }

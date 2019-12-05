@@ -66,3 +66,11 @@ $montserratBold : 'montserratbold';
 }
 
 $futuraMedium : 'Futura-medium';
+
+@font-face {
+	font-family: 'gothic';
+	src: url('./../fonts/gothic.eot');
+	src: local('./../fonts/gothic'), url('./../fonts/gothic.woff') format('woff'), url('./../fonts/gothic.ttf') format('truetype');
+}
+
+$gothic : 'gothic';

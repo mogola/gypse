@@ -559,6 +559,7 @@ body{
 .full-dw-home {
 	.swiper-wrapper {
 		height: auto;
+		max-height:650px;
 	}
 
 	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
@@ -602,6 +603,7 @@ body{
 		align-items: center;
 		max-width: 600px;
 		text-align: center;
+		font-family:$gothic;
 		.ttl-desc{
 			position:relative;
 			font-style:italic;
@@ -622,6 +624,7 @@ body{
 		p {
 			line-height: 36px;
 			font-size: 25px;
+			font-family:$gothic;
 			@include mbLarge {
 				font-size: 18px;
 				padding: 0 20px;

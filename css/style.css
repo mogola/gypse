@@ -13321,6 +13321,12 @@ label.panel-block:hover {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'gothic';
+  src: url("./../fonts/gothic.eot");
+  src: local("./../fonts/gothic"), url("./../fonts/gothic.woff") format("woff"), url("./../fonts/gothic.ttf") format("truetype");
+}
+
 /* Homepage links, buttons and CTA */
 .cta-btn {
   display: inline-block;
@@ -13416,8 +13422,6 @@ label.panel-block:hover {
 .dw_homepage .dwHeader .clHeaderMain .logoHeader.animated {
   transform: translateY(-50%) scale(0);
   -webkit-transform: translateY(-50%) scale(0);
-  top: 50px;
-  left: 139px;
   opacity: 0;
   -webkit-transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out, 0.5s left ease-in-out, 0.5s top ease-in-out;
   transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out, 0.5s left ease-in-out, 0.5s top ease-in-out;
@@ -13435,8 +13439,8 @@ label.panel-block:hover {
 
 .dw_homepage .dwHeader .clHeaderMain .logoHeader.animated.animatedPlus {
   opacity: 1;
-  transform: translateY(-50%) scale(2.5);
-  -webkit-transform: translateY(-50%) scale(2.5);
+  transform: translateY(-50%) scale(1);
+  -webkit-transform: translateY(-50%) scale(1);
 }
 
 @media (max-width: 1023px) {
@@ -13787,6 +13791,11 @@ label.panel-block:hover {
   .dwFooter .clFooterMain .cl-block .cl-content-block ul.infoDwShare li:nth-child(odd) {
     float: none;
   }
+}
+
+.dwFooter .clFooterMain .cl-block .cl-content-block ul.infoDwShare li:nth-child(odd) a {
+  text-decoration: none;
+  color: #000;
 }
 
 .dwFooter .clFooterMain .cl-block .cl-content-block ul.infoDwShare li + li {
@@ -14513,6 +14522,7 @@ body a {
 
 .full-dw-home .swiper-wrapper {
   height: auto;
+  max-height: 650px;
 }
 
 @media (max-width: 1023px) {
@@ -14561,6 +14571,7 @@ body a {
   align-items: center;
   max-width: 600px;
   text-align: center;
+  font-family: "gothic";
 }
 
 .full-desc .top-desc .ttl-desc {
@@ -14587,6 +14598,7 @@ body a {
 .full-desc .top-desc p {
   line-height: 36px;
   font-size: 25px;
+  font-family: "gothic";
 }
 
 @media (max-width: 1023px) {

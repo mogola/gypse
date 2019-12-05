@@ -355,26 +355,26 @@ function detectTotemProd(scrollDetect) {
 		parallaxElement(_this, '.home-dw');
 	});
 
-	$('.swiper-slide img').each(function () {
-		// get current element "totem"
-		var _this = $(this);
-		// for content get parent of totem
-		var _thisParent = _this.closest('.home-dw');
-		// get current offsetleft of content asset
-		var offsetLeftParent = _thisParent.offset().top;
-		// get value for calcul of percent from left of content asset
-		var posx = _this.attr('data-posx');
-		// get height of current element "totem"
-		var heightCa = _this.height();
+	// $('.swiper-slide img').each(function () {
+	// 	// get current element "totem"
+	// 	var _this = $(this);
+	// 	// for content get parent of totem
+	// 	var _thisParent = _this.closest('.home-dw');
+	// 	// get current offsetleft of content asset
+	// 	var offsetLeftParent = _thisParent.offset().top;
+	// 	// get value for calcul of percent from left of content asset
+	// 	var posx = _this.attr('data-posx');
+	// 	// get height of current element "totem"
+	// 	var heightCa = _this.height();
 
-		// Apply position of left on content "totem"
-		_this.css({
-			'top': (offsetLeftParent + ((_thisParent.width()) * posx / 100))
-		});
+	// 	// Apply position of left on content "totem"
+	// 	_this.css({
+	// 		'top': (offsetLeftParent + ((_thisParent.width()) * posx / 100))
+	// 	});
 
-		// for each element call function for desappearance
-		parallaxImage(_this, '.home-dw');
-	});
+	// 	// for each element call function for desappearance
+	// 	parallaxImage(_this, '.home-dw');
+	// });
 
 }
 
