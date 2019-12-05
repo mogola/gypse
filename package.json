@@ -1,0 +1,30 @@
+{
+  "name": "nomadeo",
+  "version": "1.0.0",
+  "description": "home testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mogola/nomadeo.git"
+  },
+  "keywords": [
+    "homepage",
+    "test"
+  ],
+  "author": "Mogola sangare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mogola/nomadeo/issues"
+  },
+  "homepage": "https://github.com/mogola/nomadeo#readme",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7"
+  }
+}
