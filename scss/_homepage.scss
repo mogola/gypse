@@ -109,12 +109,13 @@ body{
 			@include mbLarge{
 				opacity: 1;
 				max-width: 100%;
+				margin-top: -56px;
 				@include transX();
 				h2{
 					font-size: 26px;
 				}
 				h3{
-					font-size:20px;
+					font-size:18px;
 				}
 			}
 
@@ -562,6 +563,12 @@ body{
 	}
 }
 .full-dw-home {
+	.swiper-container {
+		@include mbLarge {
+			padding-top: 60px;
+		}
+	}
+
 	.swiper-wrapper {
 		height: auto;
 		max-height:650px;
@@ -613,6 +620,7 @@ body{
 			position:relative;
 			font-style:italic;
 			font-size: 22px;
+
 			&:before{
 				content:""; 
 				display:block;

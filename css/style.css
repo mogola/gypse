@@ -13961,6 +13961,7 @@ body a {
   .full-dw-home.home-dw .ttl-tile {
     opacity: 1;
     max-width: 100%;
+    margin-top: -56px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     left: 50%;
@@ -13969,7 +13970,7 @@ body a {
     font-size: 26px;
   }
   .full-dw-home.home-dw .ttl-tile h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -14522,6 +14523,12 @@ body a {
 @media (max-width: 1023px) {
   .columns .column:nth-child(odd) {
     padding: 20px 50px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .full-dw-home .swiper-container {
+    padding-top: 60px;
   }
 }
 

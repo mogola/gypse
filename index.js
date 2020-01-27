@@ -10,7 +10,7 @@ app.use('/js', express.static('js'))
 app.use('/fonts', express.static('fonts'))
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/index_server.html'));
 });
 
 app.get('/home', function (req, res) {
