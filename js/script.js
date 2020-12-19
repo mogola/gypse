@@ -1,10 +1,16 @@
-$(document).ready(function () {
+import 'babel-polyfill'
+import Swiper from 'swiper/bundle';
+const jquery = require('jquery')
+//
+$ = window.$ = window.jQuery = jquery;
+
+$(document).ready( async function () {
 	setTimeout(function () {
 		scrollInit();
 	}, 2000);
 	detectTotemProd();
 	AllEvents();
-	swiperInit();
+	await swiperInit();
 });
 
 var cl = {
@@ -578,18 +584,28 @@ function AllEvents() {
 }
 
 function swiperInit() {
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		height: 400,
-		loop: false,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+	try{
+		const initSwiper = () => {
+			let swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				height: 400,
+				loop: false,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		}
+
+		initSwiper()
+	}
+	catch(err){
+		console.log(err)
+	}
+
 }

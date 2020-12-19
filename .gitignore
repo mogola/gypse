@@ -1,3 +1,5 @@
 node_modules
 node_modules/*/**
 ./wp-content/uploads/
+.cache/00/14b5399ec01f50769dbe2881bac65a.json
+.cache/
