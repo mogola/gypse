@@ -1,13 +1,25 @@
-
-@import "node_modules/bulma/sass/utilities/initial-variables";
-@import "node_modules/bulma/bulma";
-@import "icomoon";
-@import "fonts";
 @import "variables";
 @import "mixin";
-@import "header";
-@import "footer";
-@import "homepage";
-@import "project";
-@import "functions";
-@import "swiper";
+
+
+//1. afficher le block losrque nous sommes en hover sur le lien
+.block{
+    width:200px;
+    height:200px;
+    background: grey;
+    display: none;
+    &--green {
+        background: $green;
+    }
+}
+
+// 2. Placer les blocks horizontalement
+.block{
+    &--green{
+        width:200px;
+        height:200px;
+        margin: 5px 0;
+    }
+}
+
+// 3. gestion du responsive agrandir la surface des blocks à 100%

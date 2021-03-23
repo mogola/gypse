@@ -1,0 +1,64 @@
+/* Homepage links, buttons and CTA */
+.cta-btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 17px;
+  border: solid 1px;
+  opacity: 0.8;
+  color: #000;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  white-space: nowrap;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+.cta-btn.white {
+  border-color: #fff;
+  color: #fff;
+}
+.cta-btn:hover {
+  letter-spacing: 2px;
+  padding: 8px 9px;
+  opacity: 1;
+}
+
+.link-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  border-bottom: 1px solid;
+  padding-bottom: 4px;
+  opacity: 0.8;
+  white-space: nowrap;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+.link-btn.white {
+  border-color: #fff;
+  color: #fff;
+}
+.link-btn:hover {
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background: grey;
+  display: none;
+}
+.block--green {
+  background: green;
+}
+
+.block--green {
+  width: 200px;
+  height: 200px;
+  margin: 5px 0;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

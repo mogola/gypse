@@ -10,7 +10,7 @@ app.use('/fonts', express.static('fonts'))
 app.use(express.static('dist'))
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/ebeniste.html'));
+    res.sendFile(path.join(__dirname + '/dist/test.html'));
 });
 
 app.get('/home', function (req, res) {

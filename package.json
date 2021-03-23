@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/nodemon ./index.js",
-    "build": "parcel build ebeniste.html",
-    "parcel": "parcel ebeniste.html"
+    "build": "parcel build test.html",
+    "parcel": "parcel test.html"
   },
   "repository": {
     "type": "git",
