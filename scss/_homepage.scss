@@ -1,7 +1,6 @@
 body{
 	font-family: arial;
-	*{
-	}
+	scroll-behavior: smooth;
 	a{
 		cursor:pointer;
 	}
@@ -550,7 +549,7 @@ body{
 		&:nth-child(even) {
 			padding:40px 0 40px 40px;
 			@include mbLarge{
-				padding:20px 50px; 
+				padding:20px 50px;
 			}
 		}
 
@@ -622,12 +621,12 @@ body{
 			font-size: 22px;
 
 			&:before{
-				content:""; 
+				content:"";
 				display:block;
 				width:1px;
 				height:100px;
 				margin:0 auto 40px;
-				background: #333; 
+				background: #333;
 				@include mbLarge{
 					height: 45px;
 				}

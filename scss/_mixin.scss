@@ -1,4 +1,4 @@
-// width responsive detection 
+// width responsive detection
 $widthMobile : 768px;
 $widthTabletPortrait : 1024px;
 @mixin mbLarge {
@@ -6,6 +6,12 @@ $widthTabletPortrait : 1024px;
     @content;
   }
 }
+
+@mixin dkLarge {
+	@media (min-width: #{$widthTabletPortrait - 1px}) {
+	  @content;
+	}
+  }
 @mixin mb {
   @media (max-width: #{$widthMobile - 1px}) {
     @content;
@@ -23,7 +29,7 @@ $widthTabletPortrait : 1024px;
 }
 @mixin before{
 	&:before{
-		@include mybefore; 
+		@include mybefore;
 		@content;
 	}
 }
@@ -112,7 +118,7 @@ $widthTabletPortrait : 1024px;
 	}
 }
 @mixin defaultLabel(){
-	font-size:11px;						
+	font-size:11px;
 	font-weight:bold;
 	color:$blueLabel;
 	z-index:1;
@@ -121,7 +127,7 @@ $widthTabletPortrait : 1024px;
 }
 
 @mixin defaultButton(){
-	font-size:11px;						
+	font-size:11px;
 	font-weight:normal;
 	color:$colorWhite;
 	background:$blueButton;
@@ -139,7 +145,7 @@ $widthTabletPortrait : 1024px;
 	}
 }
 @mixin defaultButtonCustom($bgCustom){
-	font-size:11px;						
+	font-size:11px;
 	font-weight:normal;
 	color:$colorWhite;
 	background:$bgCustom;
@@ -154,7 +160,7 @@ $widthTabletPortrait : 1024px;
 	letter-spacing:1px;
 	display:inline-block;
 	box-sizing:border-box;
-	@include animationMediaCustom(0.5s)
+	@include animationMediaCustom(0.5s);
 	&:hover{
 		background:$colorWhite;
 		color:$bgCustom;
@@ -166,7 +172,7 @@ $widthTabletPortrait : 1024px;
 	}
 }
 @mixin defaultButtonCancel(){
-	font-size:11px;						
+	font-size:11px;
 	font-weight:normal;
 	color:$colorWhite;
 	background:$grey2;
@@ -228,7 +234,7 @@ $widthTabletPortrait : 1024px;
 	transform:$other;
 	-webkit-transform:$other;
 }
-// color mixin 
+// color mixin
 @mixin doWhite($opacity){
 	background:rgba(255,255,255,$opacity);
 }
@@ -236,7 +242,7 @@ $widthTabletPortrait : 1024px;
 	background:rgba(0,0,0,$opacity);
 }
 
-// color mixin 
+// color mixin
 @mixin doWhiteTxt($opacity){
 	color:rgba(255,255,255,$opacity);
 }
@@ -269,7 +275,7 @@ $widthTabletPortrait : 1024px;
   ::-webkit-input-placeholder {@content}
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+  :-ms-input-placeholder      {@content}
 }
 
 @mixin gradientGreen{
@@ -281,7 +287,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27e834', end
 }
 
 
-/// homepage 
+/// homepage
 
 /* Homepage links, buttons and CTA */
 
