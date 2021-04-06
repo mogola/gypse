@@ -2,24 +2,28 @@
 @import "mixin";
 
 
-//1. afficher le block losrque nous sommes en hover sur le lien
-.block{
-    width:200px;
-    height:200px;
-    background: grey;
-    display: none;
-    &--green {
-        background: $green;
-    }
-}
-
-// 2. Placer les blocks horizontalement
-.block{
-    &--green{
+// 1. Placer les blocks horizontalement, cote à cote.
+.block {
+    &--orange{
         width:200px;
         height:200px;
         margin: 5px 0;
     }
 }
+    
 
-// 3. gestion du responsive agrandir la surface des blocks à 100%
+// 2. gestion du responsive agrandir la surface des blocks à 100%
+
+
+//3. afficher le block losrque nous sommes en hover sur le lien
+
+.block {
+    width:200px;
+    height:200px;
+    background: #ffcb00;
+    display: none;
+    &--orange {
+        background: $orange;
+    }
+    
+}
