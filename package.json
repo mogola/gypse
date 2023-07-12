@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/nodemon ./index.js",
     "build": "parcel build test.html",
-    "parcel": "parcel test.html"
+    "parcel": "parcel test.html --open"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "nodemon": "^1.19.1",
+    "open": "^9.1.0",
     "parcel-bundler": "^1.12.4",
     "path": "^0.12.7",
     "swiper": "^6.4.5"

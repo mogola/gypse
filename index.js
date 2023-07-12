@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express();
 var path = require('path');
+const { exec } = require('child_process');
+const { cpSync } = require('fs');
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 5555;
 
 app.use('/css', express.static('css'));
@@ -19,4 +21,27 @@ app.get('/home', function (req, res) {
 
 app.listen(port, function () {
     console.log(`Listening`);
+    // Your code here
+    launchToBrowser();
+    
 });
+
+
+const launchToBrowser = () => {
+    // Open the browser with a local URL
+    const localUrl = path.resolve(__dirname + '/dist/test.html');
+
+    switch (process.platform) {
+    case 'darwin': // macOS
+        exec(`open ${localUrl}`);
+        break;
+    case 'win32': // Windows
+        exec(`start ${localUrl}`);
+        break;
+    case 'linux': // Linux
+        exec(`xdg-open ${localUrl}`);
+        break;
+    default:
+        console.log(`Unable to open the browser on your platform: ${process.platform}`);
+    }
+}
